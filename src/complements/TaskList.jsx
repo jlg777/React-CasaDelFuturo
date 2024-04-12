@@ -29,6 +29,10 @@ const TaskList = () => {
     );
   };
 
+  const handleDelete = (taskId) => {
+    setTasks(tasks.filter((task) => task.id !== taskId));
+  };
+
   return (
     <>
       <h1> Lista de Tareas</h1>
@@ -49,7 +53,7 @@ const TaskList = () => {
                 <button onClick={() => handleCumplido(task.id)}>
                   {task.cumplido ? "✔️" : "❌"}{" "}
                 </button>
-                <button>🗑️</button>
+                <button onClick={() => handleDelete(task.id)}>🗑️</button>
               </div>
             </li>
           ))}
