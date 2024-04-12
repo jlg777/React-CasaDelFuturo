@@ -1,0 +1,5 @@
+li {
+  display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
+  justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+}
