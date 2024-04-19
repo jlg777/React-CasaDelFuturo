@@ -13,6 +13,8 @@
 </p>
 </div>
 
+![Casa del futuro](./public/banner-2.png)
+
 <h2 align="center" style="color:#CD5C5C">J0rg1t0 '777' <img
 src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="22" /></h2>
 
