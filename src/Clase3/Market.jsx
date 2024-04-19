@@ -59,6 +59,7 @@ const Market = ({ superM }) => {
 
   return (
     <>
+      <h1>Market</h1>
       <select
         name="filtro"
         onChange={handleProductoChange}
