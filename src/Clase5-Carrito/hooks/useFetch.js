@@ -43,6 +43,6 @@ export const useFetch = (url) => {
     }
   }, [products]);
 
-  console.log("filteredProducts", filteredProducts);
+  console.log("aca", filteredProducts);
   return products; // cuando quiero cambian por filteredProducts no llega nada
 };
