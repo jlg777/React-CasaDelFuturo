@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-//import "./index.css";
-import FetchinDatos from "./Clase5/FetchinDatos.jsx";
+import Carrito from "./Clase5-Carrito/components/Carrito";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <FetchinDatos />
+    <Carrito />
   </React.StrictMode>
 );

@@ -11,13 +11,14 @@ const FetchinDatos = () => {
       const response = await fetch(url);
       const data = await response.json();
       setRespuestaAPI(data);
-      console.log(data);
+      //console.log(data);
     } catch (error) {
       console.error("Error al obtener datos:", error);
     }
   };
 
   useEffect(() => {
+    console.log("render");
     if (urlApi) {
       fetchData(urlApi);
     }
