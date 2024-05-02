@@ -1,13 +1,13 @@
-const RenderProducts = ({ data }) => {
-  console.log("data", data);
+const RenderProducts = ({ productsFiltered }) => {
+  //console.log(productsFiltered);
 
   // Verificar si data.products está definido y es un array
-  if (!data || !data.products || !Array.isArray(data.products)) {
+  /*if (!data || !data.products || !Array.isArray(data.products)) {
     return <div>No hay productos disponibles</div>;
-  }
+  }*/
   return (
     <>
-      {data.products.map((product) => (
+      {productsFiltered.map((product) => (
         <div className="card" style={{ width: "18rem" }} key={product.id}>
           <img
             src={product.images[0]}

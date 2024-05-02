@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 
 export const useFetch = (url) => {
   const [products, setProducts] = useState(null);
-  const [filteredProducts, setFilteredProducts] = useState(null);
+  /*const [filteredProducts, setFilteredProducts] = useState(null);
   const [filter, setFilter] = useState({
     minPrice: 0,
     category: "all",
-  });
+  });*/
 
   const getFetch = async () => {
     try {
@@ -25,24 +25,24 @@ export const useFetch = (url) => {
     }
   };
 
-  const filterOfProducts = ({ products }) => {
+  /* const filterOfProducts = ({ products }) => {
     const newFilteredProducts = products.filter(
       (product) => product.price >= 0
     );
     setFilteredProducts(newFilteredProducts);
-  };
+  };*/
 
   useEffect(() => {
     getFetch();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (products) {
       filterOfProducts(products);
     }
-  }, [products]);
+  }, [products]);*/
 
-  console.log("aca", filteredProducts);
+  //console.log("aca", filteredProducts);
   return products; // cuando quiero cambian por filteredProducts no llega nada
 };
