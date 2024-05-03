@@ -5,14 +5,20 @@ function useFilter(products) {
 
   const [filter, setFilter] = useState({
     minPrice: 0,
-    category: "smartphones",
+    category: "all",
   });
 
   const filterOfProducts = ({ products }) => {
-    const newFilteredProducts = products.filter(
-      (product) => product.category !== filter.category
-    );
-    console.log(newFilteredProducts);
+    const newFilteredProducts = products.filter((product) => {
+      //console.log(product.category);
+      //console.log(filter.category);
+      return (
+        product.price >= filter.minPrice &&
+        (filter.category == "all" || filter.category == product.category)
+      );
+    });
+    // console.log(newFilteredProducts);
+
     setFilteredProducts(newFilteredProducts);
   };
 
@@ -21,8 +27,8 @@ function useFilter(products) {
       filterOfProducts(products);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [products]);
+  }, [filter, products]);
 
-  return filteredProducts;
+  return { filteredProducts, setFilter };
 }
 export default useFilter;

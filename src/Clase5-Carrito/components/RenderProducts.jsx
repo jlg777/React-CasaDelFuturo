@@ -2,9 +2,10 @@ const RenderProducts = ({ productsFiltered }) => {
   //console.log(productsFiltered);
 
   // Verificar si data.products está definido y es un array
-  /*if (!data || !data.products || !Array.isArray(data.products)) {
+  /*if (!data || !data.products || !Array.isArray(data.products)) {*/
+  if (productsFiltered.length <= 0) {
     return <div>No hay productos disponibles</div>;
-  }*/
+  }
   return (
     <>
       {productsFiltered.map((product) => (
