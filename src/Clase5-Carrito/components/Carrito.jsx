@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import RenderProducts from "./RenderProducts";
 import useFilter from "../hooks/useFilter";
 import Filter from "./Filter";
-//import "../css/renderProducts.css";
 
 const Carrito = () => {
   const products = useFetch("https://dummyjson.com/products?limit=15");
