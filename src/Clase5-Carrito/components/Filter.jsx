@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useFilterProviders } from "../hooks/useFilterProviders";
 
 const Filter = ({ setFilter }) => {
   const [minPrice, setMinPrice] = useState(0);
@@ -22,8 +23,11 @@ const Filter = ({ setFilter }) => {
     }));
   };
 
+  const { nombre } = useFilterProviders();
+
   return (
     <>
+      <h2>{nombre}</h2>
       <div>
         <label htmlFor="volume">Precio: {minPrice}</label>
         <input
