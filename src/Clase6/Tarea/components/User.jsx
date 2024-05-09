@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const User = () => {
   const [userAPI, setUserAPI] = useState([]);
@@ -30,6 +30,9 @@ const User = () => {
 
         <p className="card-text">{userAPI.status}</p>
         <p className="card-text">{userAPI.species}</p>
+        <Link to={`/`} className="btn btn-warning">
+          volver
+        </Link>
       </div>
     </div>
   );
