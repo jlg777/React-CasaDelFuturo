@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const Users = () => {
   const [respuestaAPI, setRespuestaAPI] = useState([]);
 
   const fetchData = async () => {
     try {
-      const response = await fetch("https://randomuser.me/api/?results=10");
+      const response = await fetch(
+        "https://rickandmortyapi.com/api/character/[1,2,3,4,5,6,7,8,9,10]"
+      );
       const data = await response.json();
-      setRespuestaAPI(data.results);
+      setRespuestaAPI(data);
       //console.log(data);
     } catch (error) {
       console.error("Error al obtener datos:", error);
@@ -21,20 +24,30 @@ const Users = () => {
   return (
     <>
       {respuestaAPI.map((user) => (
-        <div className="card" style={{ width: "18rem" }} key={user.login.uuid}>
-          <img src="..." className="card-img-top" alt="..." />
+        <div className="card" style={{ width: "18rem" }} key={user.id}>
+          <img src={user.image} className="card-img-top" alt="..." />
           <div className="card-body">
-            <h5 className="card-title">{user.login.uuid}</h5>
+            <h5 className="card-title">{user.name}</h5>
+            {/*
             <p className="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
+      </p>
+      */}
+
+            <Link to={`/${user.id}`} className="btn btn-primary">
+              Vista Previa
+            </Link>
+            <Link to={`/user/${user.id}`} className="btn btn-success">
+              Ampliar
+            </Link>
           </div>
         </div>
       ))}
+      <hr />
+      <section>
+        <Outlet />
+      </section>
     </>
   );
 };
