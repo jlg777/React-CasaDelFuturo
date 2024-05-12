@@ -23,7 +23,8 @@ const Users = () => {
 
   return (
     <>
-      <div className="carta">
+    <div className="container2">
+    <div className="carta">
         {respuestaAPI.map((user) => (
           <div className="card" style={{ width: "18rem" }} key={user.id}>
             <img src={user.image} className="card-img-top" alt="..." />
@@ -46,6 +47,8 @@ const Users = () => {
           </div>
         ))}
       </div>
+    </div>
+      
       <hr />
       <hr />
       <hr />

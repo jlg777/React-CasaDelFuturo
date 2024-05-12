@@ -1,3 +1,6 @@
+import Users from "./Users";
+import "./style.css"
+
 const NavBar = () => {
   return (
     <>
@@ -80,6 +83,9 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
+      <main className="container">
+      <Users />
+      </main>
     </>
   );
 };

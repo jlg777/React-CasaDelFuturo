@@ -5,20 +5,23 @@ import "./index.css";
 import { FilterProviders } from "./Clase5-Carrito/providers/filterProviders";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Rutas from "./Clase6/complements/Rutas";
-import Users from "./Clase6/Tarea/components/Users";
+//import Users from "./Clase6/Tarea/components/Users";
 import NavBar from "./Clase6/Tarea/components/NavBar";
 import User from "./Clase6/Tarea/components/User";
+import Cards from "./Clase10-TrabajoFinal/components/Cards";
+import Nav from "./Clase10-TrabajoFinal/components/Nav";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <BrowserRouter>
+    {/*    <BrowserRouter>
       <Routes>
         <Route
           path="/"
           element={
             <>
               <NavBar />
-              <Users />
+              
             </>
           }
         >
@@ -28,5 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="user/:idUser" element={<User />} />
       </Routes>
     </BrowserRouter>
+        */}
+    <Nav />
   </>
 );
